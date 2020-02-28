@@ -13,8 +13,9 @@ const skill = $('#skill')
 const work = $('#work')
 
 setTimeout(()=>{
-  load.classList.remove('active')
-},2000)
+  load.classList.remove('active');
+  
+},3000)
 
 let move = (element, time = 400) => {
   let speed = Math.abs(window.pageYOffset - element) * 10 / time
