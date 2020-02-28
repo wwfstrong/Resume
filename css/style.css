@@ -1,0 +1,234 @@
+/*侧边栏*/
+* {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  color: #3c4043;
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #5f6368;
+}
+
+.portrait {
+  margin: 20% auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  transition: transform 0.5s;
+}
+
+.portrait img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.portrait:hover {
+  transform: rotate(360deg);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav a {
+  color: #ffffff;
+  text-align: center;
+  padding: 14px;
+  transition: all 0.5s;
+}
+
+.nav a:hover {
+  background-color: #4b4b4b;
+}
+
+/* 主体内容 */
+main {
+  margin-left: 250px;
+}
+
+/* 个人资料 */
+#data {
+  background: url(../images/bg-1.jpg) fixed;
+  background-size: cover;
+}
+
+.box {
+  padding: 7% 6% 4%;
+  font-weight: bold;
+}
+
+.box .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.box .row .column {
+  width: 33%;
+}
+
+.box .row .column p {
+  line-height: 50px;
+}
+
+.box .row .column p a {
+  color: purple;
+  transition: all 0.5s;
+}
+
+.box .row .column p a:hover {
+  color: orange;
+}
+
+/* 个人技能 */
+#skill {
+  background: url(../images/bg-2.jpg);
+  background-size: cover;
+}
+
+#skill .box .row svg {
+  width: 3em;
+  height: 3em;
+  transition: all 0.5s;
+}
+
+#skill .box .row .column {
+  margin-top: 40px;
+}
+
+.cir {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 26px;
+  box-shadow: 0 5px 5px #5f6368;
+}
+
+.cir svg:hover {
+  transform: rotate(360deg);
+}
+
+#skill span {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* 个人作品 */
+#work {
+  background: url(../images/bg-3.jpg) fixed;
+  background-size: cover;
+}
+
+#work .box {
+  padding: 7% 3% 4%;
+}
+#work .box .title {
+  margin-left: 20px;
+}
+
+/* 无缝轮播 */
+
+#play {
+  border-radius: 20px;
+  width: 900px;
+  margin: 40px auto;
+  border: 5px solid #cccccc;
+  position: relative;
+  padding: 10px;
+}
+#screen {
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+#screen ul {
+  list-style-type: none;
+  position: relative;
+}
+#screen ul li {
+  width: 900px;
+  height: 500px;
+  float: left;
+}
+#screen ul li img {
+  width: 100%;
+  height: 500px;
+}
+#screen ol {
+  list-style-type: none;
+  position: absolute;
+  bottom: 15px;
+  right: 50%;
+  transform: translateX(50%);
+}
+#screen ol li {
+  float: left;
+  width: 18px;
+  height: 18px;
+  line-height: 48px;
+  background-color: #5f6368;
+  margin-right: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #ffffff;
+}
+#screen ol li.highlight {
+  background-color: orange;
+}
+#arr {
+  display: none;
+}
+#left,
+#right {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  background-color: #98a0a2;
+  opacity: 0.7;
+  font-size: 70px;
+  line-height: 70px;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  text-align: center;
+  border-radius: 20px;
+}
+#left {
+  left: 20px;
+}
+#right {
+  right: 20px;
+}
+
+#work .box p {
+  font-size: 40px;
+  text-align: center;
+  color: #ffffff;
+}
