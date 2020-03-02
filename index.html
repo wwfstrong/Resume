@@ -12,7 +12,7 @@
 
 <body>
   <!-- 加载动画 -->
-  <div class="loading active">
+  <!-- <div class="loading active">
     <div class="animation">
       <div class="c w1">L</div>
       <div class="c w2">O</div>
@@ -22,193 +22,174 @@
       <div class="c w6">N</div>
       <div class="c w7">G</div>
     </div>
-  </div>
-  <!-- 侧边栏 -->
-  <aside class="sidebar">
-    <div class="portrait">
-      <img src="./images/头像.jpg" alt="" />
+  </div> -->
+  <!-- 导航栏 -->
+  <div class="topBar sticky">
+    <div class="topBar-inner">
+      <a class="logo" href="#">
+        <span>W</span><span>WF</span>
+      </a>
+      <nav class="menu">
+        <ul class="clearfix">
+          <li>
+            <a href="#siteData">资料</a>
+          </li>
+          <li>
+            <a href="#siteSkills">技能</a>
+          </li>
+          <li>
+            <a href="#siteProjects">项目</a>
+          </li>
+          <li>
+            <a href="#">小作品</a>
+          </li>
+          <li>
+            <a href="#">联系方式</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="nav">
-      <a href="javascript:void(0)">资料</a>
-      <a href="javascript:void(0)">技能</a>
-      <a href="javascript:void(0)">作品</a>
-      <!-- <a href="javascript:void(0)">经历</a> -->
-      <!-- <a href="javascript:void(0)">团队</a> -->
-    </nav>
-  </aside>
+  </div>
+  <div class="banner">
+    <div class="mask"></div>
+  </div>
   <!-- 主题内容 -->
   <main>
-    <div id="data">
-      <div class="box">
-        <div class="title">
-          <h2>
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-ziliao"></use>
-            </svg>
-            &nbsp;个人资料
-          </h2>
+    <div id="siteData" class="data">
+      <div class="pictureAndText clearfix">
+        <div class="picture">
+          <img src="./images/头像.jpg" alt="">
         </div>
-        <div class="row">
-          <div class="column">
-            <p>姓名：王文峰</p>
-            <p>性别：男</p>
-            <p>年龄: 29岁</p>
-            <p>毕业院校：黑龙江科技大学</p>
-            <p>学历：本科</p>
-          </div>
-          <div class="column">
-            <p>QQ：865475679</p>
-            <p>
-              GitHub：
-              <a href="https://github.com/wwfstrong">wwfstrong</a>
-            </p>
-            <p>
-              博客：
-              <a href="https://www.jianshu.com/u/056c1be0ce93">https://www.jianshu.com</a>
-            </p>
-            <p>邮箱：865475679@qq.com</p>
-            <p>电话：18646024909</p>
-          </div>
-          <div class="column">
-            <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;本人对待工作认真负责，责任心强，做事稳重，善于沟通，时刻保持积极的学习态度。喜欢Web开发，拥有较强的学习能力与团队合作精神，能够很快的适应工作环境。
-            </p>
-          </div>
+        <div class="text">
+          <span class="welcome">您好，我的目标是成为一位优秀的前端工程师</span>
+          <h4>姓名：王文峰</h4>
+          <h4>求职意向：Web前端开发</h4>
+          <h4>性别：男</h4>
+          <h4>年龄：29岁</h4>
+          <h4>学历：本科</h4>
+          <h4>所在城市：杭州</h4>
+          <h4>毕业院校：黑龙江科技大学</h4>
+          <hr>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;本人自学前端半年，对待工作认真负责，责任心强，做事稳重，善于沟通，时刻保持积极的学习态度。喜欢Web开发，拥有较强的学习能力与团队合作精神，能够很快的适应工作环境。
+          </p>
         </div>
       </div>
     </div>
-    <div id="skill">
-      <div class="box">
-        <div class="title">
-          <h2>
+    <div class="download">
+      <a href="#" target="_blank" download>下载 PDF 简历</a>
+    </div>
+    <div id="siteSkills" class="skill">
+      <div class="title">
+        <h2>掌握技能</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="cir">
             <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-zhishi"></use>
+              <use xlink:href="#icon-html"></use>
             </svg>
-            &nbsp;个人技能
-          </h2>
+          </div>
+          <span>
+            <h2>HTML 5</h2>
+          </span>
+          <span>熟悉 HTML 5 及语义化，了解 Canvas 动画制作</span>
         </div>
-        <div class="row">
-          <div class="column">
-            <div class="cir">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-html"></use>
-              </svg>
-            </div>
-            <span>
-              <h2>HTML 5</h2>
-            </span>
-            <span>熟悉 HTML5 的语法与应用</span>
+        <div class="column">
+          <div class="cir">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-css"></use>
+            </svg>
           </div>
-          <div class="column">
-            <div class="cir">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-css"></use>
-              </svg>
-            </div>
-            <span>
-              <h2>CSS3</h2>
-            </span>
-            <span>能使用 CSS3 完成页面样式</span>
+          <span>
+            <h2>CSS 3</h2>
+          </span>
+          <span>掌握 CSS 3 动画、过渡效果等常用技术</span>
+        </div>
+        <div class="column">
+          <div class="cir">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-JS"></use>
+            </svg>
           </div>
-          <div class="column">
-            <div class="cir">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-JS"></use>
-              </svg>
-            </div>
-            <span>
-              <h2>JavaScript</h2>
-            </span>
-            <span>能使用 JS 制作页面特效</span>
+          <span>
+            <h2>JavaScript</h2>
+          </span>
+          <span>熟悉原生 JavaScript，会使用 ES6 常用规范，了解 TypeScript</span>
+        </div>
+        <div class="column">
+          <div class="cir">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-jquery"></use>
+            </svg>
           </div>
-          <div class="column">
-            <div class="cir">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-jquery"></use>
-              </svg>
-            </div>
-            <span>
-              <h2>Jquery</h2>
-            </span>
-            <span>熟悉 Jquery 库的使用</span>
+          <span>
+            <h2>Jquery</h2>
+          </span>
+          <span>熟悉 jQuery 的常用 API，能使用 jQuery 制作网站、轮播、Tab 组件等。</span>
+        </div>
+        <div class="column">
+          <div class="cir">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-vuejs"></use>
+            </svg>
           </div>
-          <div class="column">
-            <div class="cir">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-vuejs"></use>
-              </svg>
-            </div>
-            <span>
-              <h2>Vue.js</h2>
-            </span>
-            <span>熟悉 Vue 框架的使用</span>
+          <span>
+            <h2>Vue.js</h2>
+          </span>
+          <span>熟悉 Vue 常用功能，理解如生命周期、组件、虚拟 DOM、数据响应式等概念，能够使用 Vue 全家桶开发项目</span>
+        </div>
+        <div class="column">
+          <div class="cir">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-react"></use>
+            </svg>
           </div>
-          <div class="column">
-            <div class="cir">
-              <svg class="icon" aria-hidden="true">
-                <use xlink:href="#icon-react"></use>
-              </svg>
-            </div>
-            <span>
-              <h2>React</h2>
-            </span>
-            <span>熟悉 React 框架的使用</span>
-          </div>
+          <span>
+            <h2>React</h2>
+          </span>
+          <span>熟悉 React 框架的使用</span>
         </div>
       </div>
     </div>
-    <div id="work">
-      <div class="box">
-        <div class="title">
-          <h2>
-            <svg class="icon" aria-hidden="true">
-              <use xlink:href="#icon-zuopin"></use>
-            </svg>
-            &nbsp;个人作品
-          </h2>
+    <div id="siteProjects" class="project">
+      <div class="title">
+        <h2>项目经历</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="./images/w-1.png" alt="">
+          <span>1</span>
         </div>
-        <div id="play">
-          <div id="screen">
-            <ul id="round">
-              <li>
-                <img src="./images/w-1.png" alt="" />
-                <span>用vue框架做的cnode 社区</span>
-              </li>
-              <li>
-                <img src="./images/w-2.png" alt="" />
-                <span>可以按键的网页导航</span>
-              </li>
-              <li>
-                <img src="./images/w-3.png" alt="" />
-                <span>纯css制作的10种不同加载动画</span>
-              </li>
-              <li>
-                <img src="./images/w-4.png" alt="" />
-                <span>用parcel工具做的仿华为音乐播放器</span>
-              </li>
-              <li>
-                <img src="./images/w-5.png" alt="" />
-                <span>原生js做的动态皮卡丘</span>
-              </li>
-              <li>
-                <img src="./images/w-6.png" alt="" />
-                <span>3种不同风格的轮播</span>
-              </li>
-            </ul>
-            <ol id="btn"></ol>
-          </div>
-          <div id="arr">
-            <span id="left">&lt;</span>
-            <span id="right">&gt;</span>
-          </div>
+        <div class="column">
+          <img src="./images/w-2.png" alt="">
+          <span>2</span>
         </div>
-        <p>用vue框架做的cnode 社区</p>
+        <div class="column">
+          <img src="./images/w-3.png" alt="">
+          <span>3</span>
+        </div>
+        <div class="column">
+          <img src="./images/w-3.png" alt="">
+          <span>4</span>
+        </div>
+        <div class="column">
+          <img src="./images/w-5.png" alt="">
+          <span>5</span>
+        </div>
+        <div class="column">
+          <img src="./images/w-6.png" alt="">
+          <span>6</span>
+        </div>
+        <!-- <div class="column">
+          <span>3</span>
+          <img src="./images/w-3.png" alt="">
+        </div> -->
       </div>
     </div>
   </main>
+
+  <script src="./js/tween.min.js"></script>
   <script src="./js/main.js"></script>
-  <script src="./js/animate.js"></script>
-  <script src="./js/swiper.js"></script>
 </body>
 
 </html>
