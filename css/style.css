@@ -37,7 +37,7 @@ ol {
   z-index: 1;
   color: #9a9da2;
 }
- .sticky {
+.sticky {
   background: white;
   padding: 10px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -56,7 +56,6 @@ ol {
 }
 .menu {
   float: right;
-  
 }
 .menu ul li {
   float: left;
@@ -70,10 +69,10 @@ ol {
   border-bottom: 3px solid transparent;
   padding: 8px 0 5px;
   display: block;
-  position: relative; 
+  position: relative;
 }
-.menu ul li a:hover::after{
-  content: '';
+.menu ul li a:hover::after {
+  content: "";
   display: block;
   position: absolute;
   top: 100%;
@@ -83,11 +82,11 @@ ol {
   height: 3px;
   animation: menuSlide 0.3s linear;
 }
-@keyframes menuSlide{
-  0%{
+@keyframes menuSlide {
+  0% {
     width: 0px;
   }
-  100%{
+  100% {
     width: 100%;
   }
 }
@@ -242,6 +241,27 @@ main {
   margin-left: 4%;
   max-width: 44%;
   margin-top: 50px;
+  position: relative;
+}
+.project .row .column:hover::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+  transform: scale(0);
+  animation: change 0.5s;
+}
+@keyframes change {
+  0%{
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .project .row .column img {
   width: 100%;
@@ -249,9 +269,7 @@ main {
   cursor: pointer;
   transition: all 0.5s;
 }
-.project .row .column img:hover {
-  transform: scale(1.05);
-}
+
 /* 无缝轮播 */
 
 #play {

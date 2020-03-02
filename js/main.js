@@ -5,9 +5,10 @@ function $$(id) {
   return document.querySelectorAll(id);
 }
 
-// setTimeout(() => {
-//   load.classList.remove('active');
-// }, 3000)
+const load =$('.loading')
+setTimeout(() => {
+  load.classList.remove('active');
+}, 3000)
 
 const topBar = $('.topBar')
 window.onscroll = function () {
@@ -16,7 +17,6 @@ window.onscroll = function () {
   } else {
     topBar.classList.remove('sticky')
   }
-  console.log(window.scrollY)
 }
 
 const topA = $$('.menu ul li a ')
