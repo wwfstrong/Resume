@@ -16,6 +16,7 @@ window.onscroll = function () {
   } else {
     topBar.classList.remove('sticky')
   }
+  console.log(window.scrollY)
 }
 
 const topA = $$('.menu ul li a ')

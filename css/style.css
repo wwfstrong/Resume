@@ -237,7 +237,6 @@ main {
 .project .row {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 .project .row .column {
   margin-left: 4%;
