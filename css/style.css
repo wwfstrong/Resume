@@ -243,26 +243,6 @@ main {
   margin-top: 50px;
   position: relative;
 }
-.project .row .column:hover::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  background: rgba(255, 255, 255, 0.5);
-  transition: all 0.3s;
-  transform: scale(0);
-  animation: change 0.5s;
-}
-@keyframes change {
-  0%{
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 .project .row .column img {
   width: 100%;
   height: 300px;
@@ -320,11 +300,8 @@ main {
 #screen ol li.highlight {
   background-color: orange;
 }
-#arr {
-  display: none;
-}
-#left,
-#right {
+#arr #left,
+#arr #right {
   position: absolute;
   width: 60px;
   height: 80px;
@@ -339,15 +316,9 @@ main {
   text-align: center;
   border-radius: 20px;
 }
-#left {
+#arr #left {
   left: 20px;
 }
-#right {
+#arr #right {
   right: 20px;
-}
-
-#work .box p {
-  font-size: 40px;
-  text-align: center;
-  color: #ffffff;
 }

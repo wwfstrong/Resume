@@ -5,7 +5,8 @@ function $$(id) {
   return document.querySelectorAll(id);
 }
 
-const load =$('.loading')
+
+const load = $('.loading')
 setTimeout(() => {
   load.classList.remove('active');
 }, 3000)
@@ -20,6 +21,7 @@ window.onscroll = function () {
 }
 
 const topA = $$('.menu ul li a ')
+
 function animate(time) {
   requestAnimationFrame(animate);
   TWEEN.update(time);
@@ -51,3 +53,5 @@ for (let i = 0; i < topA.length; i++) {
       .start(); // 开始缓动
   };
 }
+
+

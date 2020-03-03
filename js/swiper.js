@@ -4,15 +4,12 @@ const screen = $("#screen");//显示屏幕
 const imgWidth = screen.offsetWidth;//屏幕自身宽度
 const btn = $("#btn"); // 小圆点父元素
 const play = $("#play"); // 容器元素
-const arr = $("#arr"); // 箭头父元素
 const larr = $("#left"); // 左箭头
 const rarr = $("#right"); // 右箭头
-const text = work.querySelector("p"); // 文案元素
 const count = wli.length; // 轮播 item 的个数
 const total = count + 2; // 包含无缝滚动的总个数
 
 let index = 1; // 当前轮播的是第几张
-let timer = null; // 定时器
 let isAnimating = false; // 当前是否是动画执行中
 
 for (i = 0; i < count; i++) {
@@ -35,15 +32,6 @@ for (i = 0; i < count; i++) {
   round.style.width = total * imgWidth + "px";
   round.style.left = -imgWidth + "px";
 })();
-
-play.onmouseenter = () => {
-  arr.style.display = "block";
-  stopTimer();
-};
-play.onmouseleave = () => {
-  arr.style.display = "none";
-  startTimer();
-};
 
 larr.onclick = () => {
   if (isAnimating) return;
@@ -73,26 +61,14 @@ function liClick() {
   changeDotText(liIndex);
 }
 
-function startTimer() {
-  timer = setInterval(() => {
-    rarr.onclick();
-  }, 3000);
-}
-
-function stopTimer() {
-  clearInterval(timer);
-}
-
 function toggle(n) {
   isAnimating = true;
-  animate(round, -n * imgWidth, () => {
+  wwfanimate(round, -n * imgWidth, () => {
     isAnimating = false;
     if (n === 0) {
-      console.log(-imgWidth * count + "px")
       round.style.left = -imgWidth * count + "px";
     }
     if (n === total - 1) {
-      console.log(-imgWidth * count + "px")
       round.style.left = -imgWidth + "px";
     }
   });
@@ -103,5 +79,4 @@ function changeDotText(index) {
     let li = btn.children[i];
     li.className = index === i ? "highlight" : "";
   }
-  text.innerText = wli[index].children[1].innerText;
 }
