@@ -11,30 +11,58 @@ setTimeout(() => {
   load.classList.remove('active');
 }, 3000)
 
+setTimeout(() => {
+  moveTop()
+}, 3000);
+
+let slideTop = $$('[data-w]')
+for (let i = 0; i < slideTop.length; i++) {
+  slideTop[i].classList.add('offset')
+}
+ 
 const topBar = $('.topBar')
 window.onscroll = function () {
+  console.log(window.scrollY)
   if (window.scrollY > 0) {
     topBar.classList.add('sticky')
   } else {
     topBar.classList.remove('sticky')
   }
+  moveTop()
+}
+function moveTop() {
+  let slideTop = $$('[data-w]')
+  let minIndex = 0;
+  for (let i = 1; i < slideTop.length; i++) {
+    if (Math.abs(slideTop[i].offsetTop - window.scrollY)
+      < Math.abs(slideTop[minIndex].offsetTop - window.scrollY))
+      minIndex = i
+  }
+  slideTop[minIndex].classList.remove('offset')
+  let id = slideTop[minIndex].id
+  let a = $('a[href="#' + id + '"]')
+  let li = a.parentNode
+  let brotherLi = li.parentNode.children
+  for (let i = 0; i < brotherLi.length; i++) {
+    brotherLi[i].classList.remove('hightlight')
+  }
+  li.classList.add('hightlight')
 }
 
 const topA = $$('.menu ul li a ')
-
 function animate(time) {
   requestAnimationFrame(animate);
   TWEEN.update(time);
 }
 requestAnimationFrame(animate);
 for (let i = 0; i < topA.length; i++) {
-  topA[i].onclick = function (x) {
-    x.preventDefault()
+  topA[i].onclick = function (a) {
+    a.preventDefault()
     // let a = x.currentTarget
     // let href = a.getAttribute('href')
     // let element = $(href)
     // let top = element.offsetTop
-    let top = $(x.currentTarget.getAttribute('href')).offsetTop
+    let top = $(a.currentTarget.getAttribute('href')).offsetTop
     let currentTop = window.scrollY
     let targetTop = top - 80
     let s = targetTop - currentTop

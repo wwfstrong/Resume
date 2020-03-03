@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   user-select: none;
+  font-family: 楷体;
 }
 body {
   overflow: auto;
@@ -71,7 +72,8 @@ ol {
   display: block;
   position: relative;
 }
-.menu ul li a:hover::after {
+.menu ul li a:hover::after,
+.menu ul li.hightlight a::after {
   content: "";
   display: block;
   position: absolute;
@@ -105,6 +107,15 @@ ol {
 /* 主体内容 */
 main {
   margin-top: -300px;
+}
+[data-w].offset {
+  transform: translateY(100px);
+  opacity: 0;
+}
+[data-w] {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.5s;
 }
 .data {
   max-width: 940px;
@@ -165,11 +176,11 @@ main {
 }
 .download {
   background: #efefef;
-  width: 106px;
+  width: 107px;
   margin: 40px auto;
   border: 1px solid #cdcfd1;
-  padding: 20px 50px;
-  border-radius: 2px;
+  padding: 25px 40px;
+  border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s;
@@ -217,17 +228,21 @@ main {
   border-radius: 50%;
   text-align: center;
   padding-top: 26px;
-  box-shadow: 0 5px 5px #5f6368;
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
 }
-
+.skill .row .column h2{
+  text-align: center;
+  margin-top: 20px;
+}
 .skill .row .column .cir svg:hover {
   transform: rotate(360deg);
 }
 
-.skill span {
+.skill .row .column span {
   display: block;
   text-align: center;
   margin: 20px 20px;
+  font-weight: bold;
 }
 .project {
   max-width: 1140px;
@@ -243,13 +258,19 @@ main {
   margin-top: 50px;
   position: relative;
 }
+.project .row .column h1{
+  text-align: center;
+}
 .project .row .column img {
+  margin-top: 20px;
   width: 100%;
   height: 300px;
   cursor: pointer;
   transition: all 0.5s;
 }
-
+.project .row .column ul{
+  margin-top: 20px;
+}
 /* 无缝轮播 */
 
 #play {
