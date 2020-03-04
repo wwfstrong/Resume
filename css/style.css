@@ -277,6 +277,13 @@ main {
 .project .row .column ul li{
   margin-bottom: 10px;
 }
+.project .row .column ul li a{
+  color: orange;
+  transition: all 0.3s;
+}
+.project .row .column ul li a:hover{
+  color: blue;
+}
 .works{
   max-width: 1140px;
   margin: 40px auto 20px;
