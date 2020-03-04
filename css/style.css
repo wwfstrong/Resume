@@ -312,9 +312,9 @@ main {
   height: 450px;
   float: left;
 }
-#screen ul li img {
+#screen ul li a img {
   width: 100%;
-  height: 500px;
+  height: 450px;
 }
 #screen ol {
   list-style-type: none;
