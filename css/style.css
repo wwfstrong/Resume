@@ -57,6 +57,7 @@ ol {
 }
 .menu {
   float: right;
+  margin-right: 50px;
 }
 .menu ul li {
   float: left;
@@ -65,7 +66,7 @@ ol {
 }
 .menu ul li a {
   color: inherit;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   border-bottom: 3px solid transparent;
   padding: 8px 0 5px;
@@ -135,17 +136,19 @@ main {
   height: 341px;
 }
 .pictureAndText .text {
-  float: right;
-  margin-right: 2%;
-  width: 470px;
+  float: left;
+  margin-left: 5%;
+  width: 500px;
   font-weight: bold;
 }
 .welcome {
   background: #007acc;
   color: white;
-  padding: 4px 16px;
+  padding: 8px 16px;
   position: relative;
   border-radius: 5px;
+  top: 0px;
+  left: 30px;
 }
 .welcome::after {
   content: "";
@@ -157,14 +160,13 @@ main {
   border-top-width: 0px;
 }
 .pictureAndText .text h4 {
-  width: 181px;
+  width: 200px;
   color: #3d4451;
   float: left;
-  margin: 20px 54px 0 0;
+  margin: 20px 40px 0 10px;
 }
-.pictureAndText .text h4:nth-child(8) {
-  margin-bottom: 20px;
-  width: 100%;
+.pictureAndText .text h4:nth-child(11) {
+  margin-bottom: 15px;
 }
 .pictureAndText .text p {
   font-size: 16px;
@@ -172,7 +174,10 @@ main {
   line-height: 38px;
 }
 .pictureAndText .text hr {
-  margin: 20px 0;
+  margin-bottom: 15px;
+}
+.pictureAndText .text .remind {
+  color: orange;
 }
 .download {
   background: #efefef;
@@ -231,7 +236,7 @@ main {
   padding-top: 26px;
   box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.5);
 }
-.skill .row .column h2{
+.skill .row .column h2 {
   text-align: center;
   margin-top: 15px;
 }
@@ -244,7 +249,6 @@ main {
   text-align: center;
   margin: 15px 20px;
   font-weight: bold;
-  
 }
 .project {
   max-width: 1140px;
@@ -259,34 +263,53 @@ main {
   max-width: 44%;
   margin-top: 40px;
   position: relative;
-  color: #3d4451;;
+  color: #3d4451;
 }
-.project .row .column h1{
+.project .row .column h1 {
   text-align: center;
 }
 .project .row .column img {
+  text-align: center;
   margin-top: 20px;
   width: 100%;
   height: 300px;
   cursor: pointer;
   transition: all 0.5s;
 }
-.project .row .column ul{
+.project .row .column .special{
+  /* display: inline-block; */
+  width: 168px;
+  margin: 0 auto;
+}
+.project .row .column ul {
   margin-top: 20px;
 }
-.project .row .column ul li{
+.project .row .column ul li {
   margin-bottom: 10px;
 }
-.project .row .column ul li a{
+.project .row .column ul li a {
   color: orange;
   transition: all 0.3s;
 }
-.project .row .column ul li a:hover{
+.project .row .column ul li a:hover {
   color: blue;
 }
-.works{
+.works {
   max-width: 1140px;
-  margin: 40px auto 20px;
+  margin: 80px auto 10px;
+}
+.contact {
+  max-width: 1140px;
+  margin: 40px auto;
+}
+.contact #text {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 40px;
+  color: #3d4451;
+}
+.contact #text p {
+  margin-top: 20px;
 }
 /* 无缝轮播 */
 
