@@ -22,7 +22,6 @@ for (let i = 0; i < slideTop.length; i++) {
  
 const topBar = $('.topBar')
 window.onscroll = function () {
-  console.log(window.scrollY)
   if (window.scrollY > 0) {
     topBar.classList.add('sticky')
   } else {

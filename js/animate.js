@@ -1,16 +1,16 @@
 // 封装动画的函数
-function wwfanimate(element, target, fn, totalTime = 300) {
+function wwfAnimate(element, target, fn, totalTime = 300) {
   // 通过判断，保证页面上只有一个定时器在执行动画
   if (element.timerId) {
     clearInterval(element.timerId);
     element.timerId = null;
   }
   // 步进  每次移动的距离
-  let step = Math.abs(element.offsetLeft - target) * 10 / totalTime
+  var step = Math.abs(element.offsetLeft - target) * 10 / totalTime
 
   element.timerId = setInterval(function() {
     // 盒子当前的位置
-    let current = element.offsetLeft;
+    var current = element.offsetLeft;
     // 判断如果当前位置 > 目标位置 此时的step  要小于0
     if (current > target) {
       step = -Math.abs(step);
